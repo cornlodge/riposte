@@ -1,18 +1,10 @@
-from pathlib import Path
-
 from setuptools import find_packages, setup
-
-HERE = Path(__file__).parent.resolve()
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
     name="riposte",
-    use_scm_version={
-        "root": str(HERE),
-        "write_to": str(HERE / "riposte" / "_version.py"),
-    },
     description=(
         "Package for wrapping applications inside "
         "a tailored interactive shell."
